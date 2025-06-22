@@ -140,8 +140,8 @@ if __name__ == "__main__":
     # 北京时间 = UTC +8小时
     # 所以北京时间 09:30 = UTC 01:00
     # 北京时间 21:30 = UTC 13:00
-    schedule.every().day.at("05:00").do(job)  # UTC 时间 05:00 -> 北京时间 14:00
-    schedule.every().day.at("14:00").do(job)  # UTC 时间 14:00 -> 北京时间 22:00
+    schedule.every().day.at("06:15").do(job)  # UTC 时间 06:15 -> 北京时间 14:15
+    schedule.every().day.at("15:15").do(job)  # UTC 时间 15:15 -> 北京时间 23:15
 
     # 每 5 分钟执行一次心跳打印，防止容器因无日志输出被休眠
     schedule.every(5).minutes.do(heartbeat)
